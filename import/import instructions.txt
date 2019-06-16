@@ -1,0 +1,8 @@
+0) connect as system on destination computer
+1) create new user/schema
+	create user new_user identified by user_password default tablespace users quota unlimited on users;
+2) grant permissions
+	grant connect,create session,imp_full_database to new_user;
+3) disconnect
+4) now import
+	imp new_user/user_password@ORCL file = import\import.dmp log = import\logs.log full = y;
