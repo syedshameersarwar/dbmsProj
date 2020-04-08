@@ -47,10 +47,3 @@ left join invite_details i on s.subject_id = i.subject_id group by s.subject_nam
 select u.user_email,s.student_name,t.teacher_name from users u
 left join students s on u.user_email = s.student_email left join 
 teachers t on t.teacher_email = u.user_email;
-
-
-
-
-
-
-
